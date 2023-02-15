@@ -53,6 +53,7 @@ function gameEngine() {
     if (isCollide(snakeArr)) {
         gameOverSound.play();
         musicSound.pause();
+        musicSound.currentTime=0;
         alert("Game Over .Press any key to play again!")
         inputDir = { x: 0, y: 0 };//use to pause the snake when game restarts 
         snakeArr = [{ x: 13, y: 13 }]
@@ -150,7 +151,8 @@ window.requestAnimationFrame(main); //starting from here// looping of function /
 
 window.addEventListener('keydown', e => {
    // inputDir = { x: 0, y: 1 }  //start the game
-    moveSound.play();
+   moveSound.play();
+    musicSound.play();
     switch (e.key) {  //switch when  keys are pressed
         case "ArrowUp":
             console.log("ArrowUp")

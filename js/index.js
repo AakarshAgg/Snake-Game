@@ -151,6 +151,7 @@ window.requestAnimationFrame(main); //starting from here// looping of function /
 window.addEventListener('keydown', e => {
    // inputDir = { x: 0, y: 1 }  //start the game
     moveSound.play();
+    musicSound.play();
     switch (e.key) {  //switch when  keys are pressed
         case "ArrowUp":
             console.log("ArrowUp")
